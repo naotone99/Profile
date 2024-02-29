@@ -19,6 +19,18 @@
 	display: none;
 }
 
+
+/*divide lr
+display:grid;
+grid-template-columns : 1fr 1fr;
+
+.left{
+		grid-column: 1/2;
+	}
+	.right{
+		grid-column: 2/3;
+	}*/
+
 .Fade1{
 	font-size: 16px;
 	letter-spacing: 0.2em;
