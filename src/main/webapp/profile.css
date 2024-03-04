@@ -1,6 +1,8 @@
 @charset "UTF-8";
 
+/*導入画面*/
 .welcome{
+	font-family: 'Mv Boli';
 	text-align: center;
 	font-size: 60px;
 	/* animation */
@@ -11,36 +13,99 @@
 	display: none;
 }
 
+/*profile全体*/
 .center{
-	max-width: 600px;
-	border-color: black;
-	background-color: lightblue;
-	margin: auto;
 	display: none;
+	background-color: white;
+	/*max-width: 666px;*/
+	padding: 0 8px;
+	border-radius: 20px;
+	margin: auto;
+	margin-top: 100px;
 }
 
-
-/*divide lr
-display:grid;
-grid-template-columns : 1fr 1fr;
-
+/*画像を中央に*/
 .left{
+	text-align: center;
+}
+
+/*左右に分割*/
+@media only screen and (min-width: 666px) {
+	.LandR{
+		display: grid;
+		background-color: white;
+		grid-template-columns: 1fr 1fr;
+		padding: 0 8px;
+		border-radius: 20px;
+	}
+	.left{
 		grid-column: 1/2;
 	}
 	.right{
 		grid-column: 2/3;
-	}*/
-
+	}
+}
+	
+/*1-4を順番にjsで表示。 1, 3は１文字ごとに。*/
 .Fade1{
-	font-size: 16px;
+	font-family: 'Mv Boli';
+	font-size: 20px;
 	letter-spacing: 0.2em;
 	word-break : break-all;
+	text-align: center;
 }
-
 .Fade1 span{
 	display: none;
 }
 
 .Fade2{
 	display: none;
+}
+
+.Fade3{
+	font-family: 'Mv Boli';
+	font-size: 20px;
+	letter-spacing: 0.2em;
+	word-break : break-all;
+	text-align: center;
+}
+.Fade3 span{
+	display: none;
+}
+
+.Fade4{
+	display: none;
+}
+
+/*productの見た目*/
+.product{
+	width: 300px;
+	border: 1px solid black;
+	border-radius: 20px;
+}
+.product .LandR{
+	display: grid;
+	padding: 8px;
+	grid-template-columns: 1fr 1fr;
+}
+.LandR left{
+	grid-column: 1/2;
+}
+.LandR .right{
+	grid-column: 2/3;
+}
+
+/*product画像の見た目*/
+.productI{
+	border-radius: 20px;
+	display: flex;
+    align-items: center;	
+}
+
+/*langクラス内要素を横並びにする*/
+.Java{
+	display: inline;
+	border-radius: 20px;
+	background-color:#336699;
+	padding: 0 5px;
 }
