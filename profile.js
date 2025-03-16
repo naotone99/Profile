@@ -32,7 +32,7 @@ $(window).on('load', function(){
     $('.center').delay(timeLag).fadeIn(time * 5);
     timeLag += time * 5;
 
-    let varb_finish = 0;//文字表示速度測定
+    let finish = 0;//文字表示速度測定
     let fade1Obj = $('.fade1');
     fade1Obj.each(function(){
         let fade1 = $(this).html();
@@ -47,9 +47,9 @@ $(window).on('load', function(){
         fade1Obj_child.each(function(i){
             $(this).delay(time * i + timeLag).fadeIn(time);
         });
-        varb_finish = fade1Obj_child.length * time;
+        finish = fade1Obj_child.length * time;
     });
-    timeLag += varb_finish + time * 5;
+    timeLag += finish + time * 5;
 
     $('.fade2').delay(timeLag).fadeIn(time * 5);
 })
