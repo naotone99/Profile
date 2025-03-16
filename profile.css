@@ -1,0 +1,74 @@
+@charset "UTF-8";
+body{
+    background-color: #BBFFFF;
+}
+/* 導入画面 */
+.welcome{
+	font-family: 'Mv Boli';
+	text-align: center;
+	font-size: 60px;
+	/* animation */
+	letter-spacing: 0.1em;
+	word-break : break-all;
+    /* 単語ごとに空白を付与し折り返されるよう設定 */
+}
+.welcome span{
+    display: none;
+}
+
+/* profile全体 */
+.center{
+    display: none;
+    background-color: white;
+    /* max-width: 666px; */
+    padding: 0 8px;
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+/* 左側コンテンツ */
+.Left{
+    text-align: center;
+}
+
+/* min-width666px以上の画面への処理 */
+@media only screen and (min-width: 666px){
+    .divide_LR{
+        display: grid;
+        background-color: white;
+        grid-template-columns: 1fr 1fr;
+        padding: 0 8px;
+        border-radius: 20px;
+    }
+    .Left{
+        grid-column: 1/2;
+    }
+    .Right{
+        grid-column: 2/3;
+    }
+}
+
+/* javscroptでの表示遅延 */
+.fade1{
+    font-family: 'Boli';
+    font-size: 20px;
+    letter-spacing: 0.2em;
+    word-break: break-all;
+    text-align: center;
+}
+.fade1 span{
+    display: none;
+}
+
+.fade2{
+    display: none;
+}
+
+/* 画像の見た目 */
+.productImg{
+    align-items: center;
+    display: flex;
+    border-radius: 20px;
+}
+
