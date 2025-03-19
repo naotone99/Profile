@@ -69,6 +69,7 @@ body{
 .productImg{
     align-items: center;
     max-height: 200px;
+    max-width: 100%;
     display: flex;
     border-radius: 20px;
 }
