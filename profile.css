@@ -74,3 +74,11 @@ body{
     border-radius: 20px;
 }
 
+
+.fade2 .divide_LR {
+    display: none; /* 非表示をデフォルトに */
+  }
+  
+  .fade2 .divide_LR.active {
+    display: grid; /* アクティブなスライドのみ表示 */
+  }

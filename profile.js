@@ -52,4 +52,28 @@ $(window).on('load', function(){
     timeLag += finish + time * 5;
 
     $('.fade2').delay(timeLag).fadeIn(time * 5);
+
+    slideShow()
 })
+
+function slideShow(){
+    $(document).ready(function() {
+        // .fade2 内のすべての .divide_LR 要素を取得
+        const produstList = $(".fade2").children(".divide_LR");
+        let currentIndex = 0;
+      
+        function showing() {
+          // 現在表示の active クラスを削除
+          produstList.eq(currentIndex).removeClass("active");
+      
+          // 次のクラスのactive要素付与
+          currentIndex = (currentIndex + 1) % produstList.length;
+          produstList.eq(currentIndex).addClass("active");
+        }
+        produstList.eq(currentIndex).addClass("active");
+      
+        // 3秒ごとに切り替え
+        setInterval(showing, 3000);
+      });
+      
+}
