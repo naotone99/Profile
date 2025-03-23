@@ -21,10 +21,12 @@ body{
     display: none;
     background-color: white;
     /* max-width: 666px; */
-    padding: 0 8px;
+    height: 60vh;
     border-radius: 20px;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+    position: relative;
 }
 
 /* 左側コンテンツ */
@@ -36,10 +38,7 @@ body{
 @media only screen and (min-width: 666px){
     .divide_LR{
         display: grid;
-        background-color: white;
         grid-template-columns: 1fr 1fr;
-        padding: 0 8px;
-        border-radius: 20px;
     }
     .Left{
         grid-column: 1/2;
@@ -77,8 +76,15 @@ body{
 
 .fade2 .divide_LR {
     display: none; /* 非表示をデフォルトに */
-  }
+    background-color: white;
+    border-radius: 20px;
+}
   
-  .fade2 .divide_LR.active {
+.fade2 .divide_LR.active {
     display: grid; /* アクティブなスライドのみ表示 */
-  }
+}
+
+.slide-buttons {
+    position: absolute; /* 親要素に基づいて位置を決める */
+    bottom: 0; /* 親要素の下端に配置 */
+}
