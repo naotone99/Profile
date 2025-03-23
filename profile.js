@@ -53,14 +53,14 @@ $(window).on('load', function(){
 
     $('.fade2').delay(timeLag).fadeIn(time * 5);
 
-    slideShow()
+    slideShow(0);
 })
 
-function slideShow(){
+function slideShow(Index){
     $(document).ready(function() {
         // .fade2 内のすべての .divide_LR 要素を取得
         const produstList = $(".fade2").children(".divide_LR");
-        let currentIndex = 0;
+        let currentIndex = Index;
       
         function showing() {
           // 現在表示の active クラスを削除
@@ -73,7 +73,13 @@ function slideShow(){
         produstList.eq(currentIndex).addClass("active");
       
         // 3秒ごとに切り替え
-        setInterval(showing, 3000);
+        setInterval(showing, 5000);
+
+        $(".slide-button").on("click", function () {
+            const clickedIndex = $(this).index(); // クリックされたボタンのインデックスを取得
+            produstList.eq(currentIndex).removeClass("active"); // 現在表示のactiveクラス削除
+            currentIndex = clickedIndex; // クリックされたボタンのインデックスをセット
+            produstList.eq(currentIndex).addClass("active"); // クリックされたクラスにactiveクラスを付与
+        });
       });
-      
 }
